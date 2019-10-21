@@ -26,11 +26,10 @@ public class BookController {
         return bookService.add(book);
     }
 
-    @RequestMapping(method = RequestMethod.GET,value="/find/{id}")
+    @RequestMapping(method = RequestMethod.GET,value="/find/{id}",produces = "application/json")
     public Book find(@PathVariable int id)
     {
         return bookService.find(id);
-
     }
 
     @RequestMapping(method = RequestMethod.GET,value="/name/{id}")
